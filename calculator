@@ -1,0 +1,28 @@
+# Ask user for + - * %
+operation = input("Which operation would you like to perform?: \n\naddition (a), substraction (s), multiplication (m), or division (d): \n\n")
+
+def average():
+    
+
+
+
+
+num1 = int(input("\n\nEnter a number: \n\n"))
+num2 = int(input("\n\nEnter another number: \n\n"))
+
+if operation == "a":
+    result = num1 + num2
+    sign = "+"
+elif operation == "s":
+    result = num1 - num2
+    sign = "-"
+elif operation == "m":
+    result = num1 * num2
+    sign = "x"
+elif operation == "d":
+    result = num1 / num2
+    sign = "÷"    
+else:
+    print("Not a valid operation. ")
+
+print(f"\n\n{num1} {sign} {num2} = {result}")
