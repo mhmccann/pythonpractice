@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+# Ask user for + - * %
+operation = input("Which operation would you like to perform?:\nAddition (a), subtraction (s), multiplication (m), or division (d):\n")
+
+def addition():   
+    number_in = input("Enter the numbers: \n").split()
+    for num in range(0, len(number_in)):
+        number_in[num] = float(number_in[num])
+    add = round(sum(number_in),2)
+    print(f"Result: {add}")
+
+def subtraction():   
+    number_in = input("Enter the numbers: \n").split()
+    for num in range(0, len(number_in)):
+        number_in[num] = float(number_in[num])
+    sub = number_in[0]
+    for n in number_in[1:]:
+        sub -= n
+        sub1 = round(sub,2)
+    print(f"Result: {sub1}")
+
+
+def multiplication():
+    number_in = input("Enter the number: \n").split()
+    for num in range(0, len(number_in)):
+        number_in[num] = float(number_in[num])
+    mul = 1
+    for n in number_in:
+        mul *= n
+        mul1 = round(mul,2)
+    print(f"Result: {mul1}")
+
+def division():
+    number_in = input("Enter the number: \n").split()
+    for num in range(0, len(number_in)):
+        number_in[num] = float(number_in[num])
+    div = number_in[0]
+    for n in number_in[1:]:
+        div /= n
+    div1 = round(div,2)
+    print(f"Result: {div1}")
+
+if operation == "a":
+    addition()
+elif operation == "s":
+    subtraction()
+elif operation == "m":
+    multiplication()
+else:
+    division()
+
